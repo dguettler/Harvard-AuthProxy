@@ -1,0 +1,74 @@
+---
+vendor/rails:
+  :type: git
+  :repository: ssh://cmir-dev/var/git/external/rails
+  :revision: rails_2.3
+
+# Available External Plugins
+# acts_as_list  cached_externals      exception_notification  haml              prawn         prawnto  responds_to_parent  rspec_rails       run_later             will_paginate
+# acts_as_tree  calendar_date_select  factory_girl            in_place_editing  prawn-layout  rails    rspec               ruby-spreadsheet  spreadsheet_on_rails
+
+vendor/plugins/factory_girl:
+  :type: git
+  :repository: ssh://cmir-dev/var/git/external/factory_girl
+  :revision: rails_2.2.2
+
+vendor/plugins/haml:
+  :type: git
+  :repository: ssh://cmir-dev/var/git/external/haml
+  :revision: rails_2.2.2
+
+vendor/plugins/rspec:
+  :type: git
+  :repository: ssh://cmir-dev/var/git/external/rspec
+  :revision: rails_2.2.2
+
+vendor/plugins/rspec_rails:
+  :type: git
+  :repository: ssh://cmir-dev/var/git/external/rspec_rails
+  :revision: rails_2.2.2
+
+
+# Available Internal Plugins
+# adm.git                  benchmark_for_rails.git  cbp.git       cmip.git              csr.git                 factory.git  imaging.git  modalities.git  publications.git    templates.git
+# animal.git               bic.git                  ccc.git       cmir.git              custom_logger.git       forum.git    imc.git      my.git          pubmed.git          templatize.git
+# application_helpers.git  biodist.git              cdp.git       cmir_upload.git       desert.git              fund.git     lbmi.git     nano.git        search_options.git  varnish_rails.git
+# arts.git                 bm.git                   chemaxon.git  core.git              dynamic_attributes.git  hr.git       logging.git  oracle.git      site.git
+# auto_complete.git        cache_fu.git             chem.git      csb_ar_hacks.git      events.git              hts.git      mip.git      path.git        surg.git
+# base.git                 calendar.git             cip.git       csb_laboratories.git  fac.git                 ical.git     mlia.git     platforms.git   template_app.git
+
+vendor/plugins/application_helpers:
+  :type: git
+  :repository: ssh://cmir-dev/var/git/plugins/application_helpers.git
+  :revision: HEAD
+
+vendor/plugins/core:
+  :type: git
+  :repository: ssh://cmir-dev/var/git/plugins/core.git
+  :revision: HEAD
+
+vendor/plugins/desert:
+  :type: git
+  :repository: ssh://cmir-dev/var/git/plugins/desert.git
+  :revision: HEAD
+
+vendor/plugins/events:
+  :type: git
+  :repository: ssh://cmir-dev/var/git/plugins/events.git
+  :revision: HEAD
+
+vendor/plugins/factory:
+  :type: git
+  :repository: ssh://cmir-dev/var/git/plugins/factory.git
+  :revision: HEAD
+
+vendor/plugins/site:
+  :type: git
+  :repository: ssh://cmir-dev/var/git/plugins/site.git
+  :revision: HEAD
+
+vendor/plugins/templates:
+  :type: git
+  :repository: ssh://cmir-dev/var/git/plugins/templates.git
+  :revision: HEAD
+

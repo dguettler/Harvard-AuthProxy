@@ -1,0 +1,17 @@
+coverage
+data
+db/*.sql
+log/*.log
+log/*.pid
+public/blank_iframe.html
+public/stylesheets/calendar_date_select
+public/javascripts/calendar_date_select
+public/images/calendar_date_select
+public/tmp
+scratch_directory
+spec/fixture_accessors.rb
+tmp/fixtures_last_modified
+tmp/metric_fu
+.DS_Store
+
+
