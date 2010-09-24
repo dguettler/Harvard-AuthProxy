@@ -39,7 +39,7 @@ class PinSession
     end
 
     def extract_message
-      encrypted_message = CGI.unescape(@_attributes['_azp_token'])
+      encrypted_message = @_attributes['_azp_token']
       decrypted_message = decrypt_message(encrypted_message)
       return if decrypted_message.blank?
 
