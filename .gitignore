@@ -13,5 +13,5 @@ spec/fixture_accessors.rb
 tmp/fixtures_last_modified
 tmp/metric_fu
 .DS_Store
-
-
+vendor/plugins
+vendor/rails

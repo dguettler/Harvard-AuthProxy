@@ -42,6 +42,16 @@ vendor/plugins/application_helpers:
   :repository: ssh://cmir-dev/var/git/plugins/application_helpers.git
   :revision: HEAD
 
+vendor/plugins/cache_fu:
+  :type: git
+  :repository: ssh://cmir-dev/var/git/plugins/cache_fu.git
+  :revision: HEAD
+
+vendor/plugins/cmir_upload:
+  :type: git
+  :repository: ssh://cmir-dev/var/git/plugins/cmir_upload.git
+  :revision: HEAD
+
 vendor/plugins/core:
   :type: git
   :repository: ssh://cmir-dev/var/git/plugins/core.git
