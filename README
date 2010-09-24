@@ -1,0 +1,17 @@
+Harvard PIN
+
+The following options need to be set in the application init file
+
+PinSession.home_dir   = <directory containing gnupg keys>
+PinSession.passphrase = <passphrase for gnupg key>
+PinSession.app_id     = <application ID received from the Harvard PIN system>
+PinSession.pin_url    = <url received from the Harvard PIN system>
+
+Further you must add the following url helper method
+
+def login_path
+  PinSession.pin_url
+end
+helper_method :login_path
+
+to your application controller
