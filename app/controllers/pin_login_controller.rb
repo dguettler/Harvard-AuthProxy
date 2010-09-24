@@ -1,5 +1,7 @@
 class PinLoginController < ApplicationController
 
+  skip_before_filter :require_login, :authentication, :authorization
+
   def validate
     @session = PinSession.new(params)
 

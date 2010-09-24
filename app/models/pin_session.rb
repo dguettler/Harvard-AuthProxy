@@ -3,7 +3,7 @@ require 'cgi'
 
 class PinSession
 
-  cattr_accessor :home_dir, :passphrase, :app_id
+  cattr_accessor :home_dir, :passphrase, :app_id, :pin_url
   attr_accessor :user_id
 
   def initialize(attributes = {})
@@ -58,10 +58,14 @@ class PinSession
 
   private
     def decrypt_message(encrypted_message)
-      Open3.popen3("/usr/bin/gpg --decrypt --homedir=#{PinSession.home_dir} --passphrase=#{PinSession.passphrase} --no-tty 2> /dev/null") do |stdin, stdout, error|
-        stdin.write(encrypted_message)
-        stdin.close
-        stdout.read
+      begin
+        Open3.popen3("/usr/bin/gpg --decrypt --homedir=#{PinSession.home_dir} --passphrase=#{PinSession.passphrase} --no-tty 2> /dev/null") do |stdin, stdout, error|
+          stdin.write(encrypted_message)
+          stdin.close
+          stdout.read
+        end
+      rescue Exception => e
+        return nil
       end
     end
 
