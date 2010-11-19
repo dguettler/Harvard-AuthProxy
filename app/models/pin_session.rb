@@ -52,10 +52,10 @@ class PinSession
 
       # TODO: verify data against signature using azp public key
 
-      authentication_data, attribute_data = data.split('&')
+      authentication_data, encoded_attribute_data = data.split('&')
       return unless valid_authentication_data(authentication_data)
 
-      attribute_data = Hash[attribute_data.split('|').collect { |el| el.split('=') }]
+      attribute_data = Hash[CGI.unescape(encoded_attribute_data).split('|').collect { |el| el.split('=') }]
       return attribute_data['givenname'], attribute_data['sn']
     end
 
