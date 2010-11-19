@@ -12,7 +12,10 @@ class PinSession
 
   def valid?
     return false unless first_name && last_name
-    return false unless (user = Site::User.find_by_first_name_and_last_name(first_name, last_name))
+    unless (user = Site::User.find_by_first_name_and_last_name(first_name, last_name))
+      RAILS_DEFAULT_LOGGER.warn("Warning: failed to lookup user with for '#{last_name}, #{first_name}'")
+      return false
+    end
 
     @user_id = user.id
     return true
